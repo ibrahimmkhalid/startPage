@@ -1,0 +1,77 @@
+[
+  {
+    "letter": "YT",
+    "label": "youtube",
+    "href": "https://youtube.com/"
+  },
+  {
+    "letter": "R",
+    "label": "reddit",
+    "href": "https://reddit.com/"
+  },
+    {
+    "letter": "GDR",
+    "label": "drive",
+    "href": "https://drive.google.com/drive/my-drive"
+  },
+    {
+    "letter": "GML",
+    "label": "gmail",
+    "href": "https://gmail.com/"
+  },
+    {
+    "letter": "FB",
+    "label": "facebook",
+    "href": "https://www.facebook.com/"
+  },
+    {
+    "letter": "FBM",
+    "label": "messenger",
+    "href": "https://www.messenger.com/"
+  },
+  {
+    "letter": "GH",
+    "label": "github",
+    "href": "https://github.com/"
+  },
+  {
+    "letter": "GPH",
+    "label": "photos",
+    "href": "https://photos.google.com/"
+  },
+  {
+    "letter": "GCL",
+    "label": "calendar",
+    "href": "https://calendar.google.com/calendar/r"
+  },
+  {
+    "letter": "AZ",
+    "label": "amazon",
+    "href": "http://amazon.com/"
+  },
+  {
+    "letter": "AE",
+    "label": "aliexpress",
+    "href": "https://www.aliexpress.com/"
+  },
+  {
+    "letter": "SL",
+    "label": "slate",
+    "href": "http://slate.nu.edu.pk/portal"
+  },
+  {
+    "letter": "FL",
+    "label": "flex",
+    "href": "http://flexstudent.nu.edu.pk/Login"
+  },
+  {
+    "letter": "WF",
+    "label": "wells fargo",
+    "href": "https://www.wellsfargo.com/"
+  },
+  {
+    "letter": "TP",
+    "label": "trans-plex",
+    "href": "http://192.168.1.10:9091/transmission/web/"
+  }
+]
