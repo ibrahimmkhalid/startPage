@@ -1,6 +1,7 @@
 /*! Variables */
 
 :root {
+  /*Colors based on ../img/wallpaper.jpg*/
   --white: #686355;
   --tile-background: #E9E0CF;
   --body-background: #D6CAB5;
@@ -14,11 +15,11 @@
 }
 
 #panelLeft {
-  --background: url('wallpaper.jpg');
+  --background: url('../img/wallpaper.jpg');
 }
 
 #panelRight {
-  --background: url('wallpaper.jpg');
+  --background: url('../img/wallpaper.jpg');
 }
 
 @media (min-width: 768px) {

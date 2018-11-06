@@ -1,4 +1,4 @@
-/*! BlindJoker's start page. */
+/*Grid and links */
 
 
 const onReady = fn => {
@@ -33,79 +33,14 @@ const toDataJSON = data => {
 
 const defaultLinks = [
   {
-    "letter": "YT",
-    "label": "youtube",
+    "letter": "SM1",
+    "label": "sample1",
     "href": "https://youtube.com/"
   },
   {
-    "letter": "R",
-    "label": "reddit",
+    "letter": "SM2",
+    "label": "sample2",
     "href": "https://reddit.com/"
-  },
-    {
-    "letter": "GDR",
-    "label": "drive",
-    "href": "https://drive.google.com/drive/my-drive"
-  },
-    {
-    "letter": "GML",
-    "label": "gmail",
-    "href": "https://gmail.com/"
-  },
-    {
-    "letter": "FB",
-    "label": "facebook",
-    "href": "https://www.facebook.com/"
-  },
-    {
-    "letter": "FBM",
-    "label": "messenger",
-    "href": "https://www.messenger.com/"
-  },
-  {
-    "letter": "GH",
-    "label": "github",
-    "href": "https://github.com/"
-  },
-  {
-    "letter": "GPH",
-    "label": "photos",
-    "href": "https://photos.google.com/"
-  },
-  {
-    "letter": "GCL",
-    "label": "calendar",
-    "href": "https://calendar.google.com/calendar/r"
-  },
-  {
-    "letter": "AZ",
-    "label": "amazon",
-    "href": "http://amazon.com/"
-  },
-  {
-    "letter": "AE",
-    "label": "aliexpress",
-    "href": "https://www.aliexpress.com/"
-  },
-  {
-    "letter": "SL",
-    "label": "slate",
-    "href": "http://slate.nu.edu.pk/portal"
-  },
-  {
-    "letter": "FL",
-    "label": "flex",
-    "href": "http://flexstudent.nu.edu.pk/Login"
-  },
-  {
-    "letter": "WF",
-    "label": "wells fargo",
-    "href": "https://www.wellsfargo.com/"
-  },
-  {
-    "letter": "TP",
-    "label": "trans-plex",
-    "href": "http://192.168.1.10:9091/transmission/web/"
   }
 ]
 
@@ -171,3 +106,65 @@ onReady(async () => {
 })
 
 
+/*Time stuff*/
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var ampm = "AM";
+    m = checkTime(m);
+    s = checkTime(s);
+    if(h>12){
+      ampm = "PM";
+      h = h -12;
+    } else {
+      if(h == 12){
+        ampm = "PM";
+      } else {
+      ampm = "AM";
+      }
+  }
+    document.getElementById('timeData').innerHTML =
+    [[h , m , s].join(":"), ampm].join(" ");
+    var t = setTimeout(startTime, 500);
+}
+
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+/*Weather stuff*/
+
+var getLocation = function() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(createAPI);
+      } else {
+          getElementById('weatherData').innerHTML = "Geolocation is not supported by this browser.";
+      }
+};
+
+var ur = "";
+
+var createAPI = function(position) {
+    ur = "http://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude;
+      ur = ur + "&APPID=d6c57b984aadbe13da26411370bd23c5";
+      var json = undefined;
+
+    $.ajax({
+      dataType: "json",
+      url: ur,
+      data: function(data) {
+      },
+      success: function(success) {
+          json = success;
+          var temp = (json.main.temp - 273.15).toFixed(0);
+          document.getElementById('weatherData').innerHTML =
+          json.weather[0].main + "."+ "<br />"
+           + temp + "°C";
+      }
+  });
+};
+
+getLocation();
