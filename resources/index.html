@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Startpage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/8.0.0/normalize.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Product+Sans:400,700" />
+	<link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/v1.3.0/dist/milligram.min.css" />
+	<link rel="stylesheet" href="startpage.css" />
+</head>
+<body onload="startTime()">
+	<div id="panelLeft">
+	</div>
+	<div id="grid" class="z-depth-2">
+		<div class="tile z-depth-1 hoverable">
+			<div class="letter">
+				...
+			</div>
+			<div class="label">
+				Failed to load
+			</div>
+		</div>
+	</div>
+	<div id="panelRight">
+		<div id="timeData"></div>
+		<div id="weatherData"></div>
+	</div>
+	<script src="https://cdn.rawgit.com/WebReflection/hyperHTML/v2.13.0/min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="startpage.js"></script>
+	<script src="myFunctions.js"></script>
+</body>
+</html>
