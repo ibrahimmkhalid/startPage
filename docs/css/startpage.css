@@ -13,13 +13,13 @@
   --columns: 2;
   --gap: 2rem;
 }
-
+/*just some testing*/
 #panelLeft {
-  --background: url('../img/wallpaper.jpg');
+  --background: url('https://w.wallhaven.cc/full/nk/wallhaven-nk792m.jpg');
 }
 
 #panelRight {
-  --background: url('../img/wallpaper.jpg');
+  --background: url('https://w.wallhaven.cc/full/nk/wallhaven-nk792m.jpg');
 }
 
 @media (min-width: 768px) {
